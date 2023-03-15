@@ -29,4 +29,4 @@ jobs:
           existing_bucket_name: elasticbeanstalk-eu-west-2-635567262396
           region: eu-west-2
           version_label: ${{ github.sha }}
-          deployment_package: deploy.zip
+          deployment_package: frontend/deploy.zip
