@@ -8,15 +8,20 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      # - name: Checkout code
+      #   uses: actions/checkout@v2
+
+      - uses: actions/checkout@v2
+      - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - run: docker build -t inktense/docker-mock:${{ github.sha }} -f Dockerfile.dev .
+      - run: docker run -e CI=true inktense/docker-mock:${{ github.sha }} npm test
   
-      - name: Build and tag Docker image
-        uses: docker/build-push-action@v2
-        with:
-          context: ./frontend
-          push: false
-          tags: inktense/docker-mock:${{ github.sha }}
+      # - name: Build and tag Docker image
+      #   uses: docker/build-push-action@v2
+      #   with:
+      #     context: ./frontend
+      #     push: false
+      #     tags: inktense/docker-mock:${{ github.sha }}
   
       - name: Build deployment package
         run: |
