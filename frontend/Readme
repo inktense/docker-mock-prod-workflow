@@ -1,7 +1,0 @@
-Commands 
-
-npm run build
-
-npm test
-
-npm run eject - removes this tool and copies files into app directory. can't go back once this is done.
