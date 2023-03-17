@@ -2,8 +2,10 @@
 
 This project is a frontend React application that is hosted in a Docker container and deployed to AWS Elastic Beanstalk using GitHub Actions.
 
+![flow diagram](assets/Dockerfile-biopsy-Google-Docs.png)
+
 ## Prerequisites
------
+
 Before getting started, you'll need to make sure you have the following tools installed:
 
     - Node.js (version 12 or later) 
@@ -13,7 +15,7 @@ Before getting started, you'll need to make sure you have the following tools in
 You'll also need to create an AWS Elastic Beanstalk application and environment to deploy your application to.
 
 ## Installation
--------
+
 To install the project, follow these steps:
 
 1. Clone the repository to your local machine.
@@ -23,12 +25,12 @@ To install the project, follow these steps:
 
 
 ## Usage
-------
+
 Once the Docker container is running, you can access the application by navigating to http://localhost:3000 in your web browser.
 
 
 ## Deployment
-------
+
 To deploy the project to AWS Elastic Beanstalk using GitHub Actions, follow these steps:
 
 1. Create an Elastic Beanstalk environment in the AWS Management Console.
